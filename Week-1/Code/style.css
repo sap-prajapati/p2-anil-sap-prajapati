@@ -119,7 +119,7 @@ footer{
     grid-area: footer;
     display: flex;
     flex-flow: row;
-    background-color: blue;
+    background-color: rgb(49, 49, 233);
     width: 100vw;
 }
 
