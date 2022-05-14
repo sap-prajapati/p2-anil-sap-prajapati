@@ -1,3 +1,7 @@
+* {
+    padding: 0;
+    margin: 0;
+}
 
 html{
     font-family: Arial, Helvetica, sans-serif;
@@ -6,11 +10,10 @@ html{
 .container
 {
    display: grid;
-   width: 100%;
-   max-height: fit-content;
+   width: 100vw;
+   height: 100vh;
    grid-template-columns: 1fr 8fr;
    grid-template-rows: 25% 50% 25%;
-
    grid-template-areas: 
    'sidebar firstblock'
    'sidebar list'
@@ -18,13 +21,13 @@ html{
    ;
    
 }
+
 .sidebar{
     display: flex;
     background-color: #f1f1f1;
     grid-area: sidebar;
-    height: max-content;
-
 }
+
 .sidebar ul {
     list-style-type: none;
     margin: 0;
@@ -47,39 +50,39 @@ html{
 
 
 .firstblock{
-    display: grid;
+    display: flex;
+    flex-flow: row;
     grid-area: firstblock;
-    height: auto;
-    width: auto;
-    grid-template-columns: 1fr 3fr;
-   grid-template-rows: 2fr 1fr;
-   grid-template-areas: 
-   'image data'
-   'image btn'
-   ;
+    width: 100%;
    background-color: #f1f1f1;
 }
 
+.firstblock div{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
 
 .firstblock img{
-grid-area: image;
-display: flexbox;
-max-width: 100%;
-max-height: 100%;
-padding: 0;
-margin: 0;
+padding: 5px;
+margin: 5px;
 }
-.text{
-grid-area: data;
+
+.text {
+    margin-top: 20px;
+    padding: 10px;
+    height: 90%;
 }
-.btn{
-    grid-area: btn;
+
+
+.firstblock div ul{
     list-style: none;
-    margin: 0;
+    margin-bottom: 20px;
     padding: 0;
+    height: 10%;
     
 }
-.btn li{
+.firstblock div ul li{
     display: inline;
     padding: 10px; 
 }
@@ -87,19 +90,26 @@ grid-area: data;
 
 .list{
     grid-area: list;
-    margin-top: 30px;
+    margin-top: 20px;
+    width: 95vw;
 }
 
 
 .list tr:nth-child(even) {
     background-color: #dddddd;
   }
+
+.list td:nth-child(4) {
+    color: blue;
+    border: 1px solid black;
+
+  }
 .list tr{
     border: 1px solid #dddddd;
     margin: 0;
 }
 .list td { 
-    width: 290px;
+    width: 350px;
     text-align: left;
     padding: 8px;
     margin: 0;
@@ -107,34 +117,36 @@ grid-area: data;
 
 footer{
     grid-area: footer;
-    display: grid;
-    height: auto;
-    width: auto;
-    grid-template-columns: 1.5fr 2fr 4fr;
-   grid-template-rows: 1fr;
-   grid-template-areas: 
-   'img para btn1'
-   ;
-   background-color: blue;
-    
-}
-.bottom img{
-    grid-area: img;
-    display: flexbox;
-max-width: 100%;
-max-height: 100%;
-padding: 0;
-margin: 0;
-}
-.bottom div{
-    grid-area: para;
-}
-.bottom ul{
-    grid-area: btn1;
-    list-style-type: none;
+    display: flex;
+    flex-flow: row;
+    background-color: blue;
+    width: 100vw;
 }
 
-.bottom li{
+footer > img {
+    padding: 5px;
+    margin: 5px;
+   
+}
+
+footer > div{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+
+footer > ul {
+    list-style-type: none;
+    width: 50%;
+   text-align: end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+} 
+
+footer > ul > li {
     display: inline;
-    padding: 50px; 
 }
