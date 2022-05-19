@@ -1,0 +1,84 @@
+*{
+margin: 0;
+padding: 0;
+}
+
+.element{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.element_left, .element_right{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    }
+.element>div>div{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.element_1{
+    background-color: red;
+    animation-name: left1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+
+.element_2{
+    background-color: blue;
+    animation-name: left2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  
+}
+
+.element_3{
+    background-color: yellow;
+    animation-name: right1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+   
+}
+
+.element_4{
+    background-color: green;
+    animation-name: right2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes left1{
+    to{
+        transform: rotate(135deg) ;
+        transform-origin: left top;
+        
+    }
+}
+
+@keyframes left2{
+    to{
+        transform: rotate(-135deg);
+        transform-origin: left bottom;
+ 
+    }
+}
+@keyframes right1{
+    to{
+        transform: rotate(-135deg);
+        transform-origin: right top;
+
+    }
+}
+@keyframes right2{
+    to{
+        transform: rotate(135deg);
+        transform-origin: right bottom;
+
+    }
+}
