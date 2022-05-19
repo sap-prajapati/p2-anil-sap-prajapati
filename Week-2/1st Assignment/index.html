@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="TopHeader">
+    <header class="TopHeader">
         <h2>Heading</h2>
         <h5>Paragraph</h5>
-    </div>
+    </header>
     <section class="block">
-        <div class="block_first">
+        <article class="block_first">
             <h1 class="block_first_heading">
                 What is Lorem Ipsum?
             </h1>
@@ -22,8 +22,8 @@
             </p>
             <br>
             <a class="block_first_link" href="http://www.lipsum.com/">Link</a>
-        </div>
-        <div class="block_second">
+        </article>
+        <article class="block_second">
             <h1 class="block_second_heading">
                 Why do we use it?
             </h1>
@@ -33,8 +33,8 @@
             </p>
             <br>
             <a class="block_second_link" href="http://www.lipsum.com/">Link</a>
-        </div>
-        <div class="block_third">
+        </article>
+        <article class="block_third">
             <h1 class="block_third_heading">
                 Where does it come from?
             </h1>
@@ -44,7 +44,7 @@
             </p>
             <br>
             <a class="block_third_link" href="http://www.lipsum.com/">Link</a>
-        </div>
+        </article>
 
     </section>
 
@@ -52,26 +52,38 @@
             <ul class="Form_info">
                 <li>
                     <label for="first-name">First Name</label>
-                    <input type="text" id="first-name" placeholder="Enter your First name here">
+                    <input type="text" id="first-name" placeholder="Enter your First name here" required>
                 </li>
                 <li>
                     <label for="last-name">Last Name</label>
-                    <input type="text" id="last-name" placeholder="Enter your last name here">
+                    <input type="text" id="last-name" placeholder="Enter your last name here" required>
                 </li>
                 <li>
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter your email here">
+                    <input type="email" id="email" placeholder="Enter your email here" required>
                 </li>
                 <li>
                     <label for="phone">Phone</label>
-                  <input type="tel" id="phone" placeholder="Enter your phone here"> 
+                  <input type="tel" id="phone" placeholder="Enter your phone here" required> 
                 </li>
                 <li>
                     <label for="message">Message</label>
-                    <textarea rows="6" id="message" placeholder="Enter your message here"></textarea>
+                    <textarea rows="6" id="message" placeholder="Enter your message here" required></textarea>
                 </li>
-
+                <li>
+                    <label for="dropdown">DropDown</label>
+                    <select id="dropdown" required>
+                        <option value="option 1">option 1</option>
+                        <option value="option 2">option 2</option>
+                        <option value="option 3">option 3</option>
+                        <option value="option 4">option 4</option>
+                      </select>
+                </li>
             </ul>
+            <div>
+                <input type="submit" class="submit" value="Submit">
+            </div>
+            
         </form>
 
    <footer class="bottom">
