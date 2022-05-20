@@ -11,16 +11,18 @@
     align-items: center;
     height: 70px;
     justify-content: center;
+    border-radius: 10px;
 
 }
 
 .block {
     display: flex;
     flex-direction: row;
-    background-color: aquamarine;
+    background-color: rgb(191, 249, 176);
     text-align: center;
     flex-wrap: wrap;
-    
+    border-radius: 10px;
+    margin: 10px;
 
 }
 
@@ -33,13 +35,20 @@
     border-radius: 10px;
 }
 
-
+.Form {
+    margin: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(221, 191, 250);
+}
 
 .Form_info{
     display: flex;
     flex-direction: column;
      flex-wrap: wrap;
      padding: 20px;
+     
+     
 }
 .Form_info>li{
    
@@ -48,8 +57,7 @@
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
-    
-    
+  
 }
 
 .Form_info>li>*{  
@@ -57,12 +65,30 @@
     flex: 1;
     margin-right: 20px;
     margin-left: 20px;
+    padding: 5px;
+    margin: 2px;
+}
+.Form_info>li>input , textarea, select{
+    border-radius: 10px;
     
+}
+
+.Form_info>li>label{
+    border-radius: 10px;
+    background-color: rgb(159, 75, 238);
 }
 .Form div{
     width: 100vw;
     text-align: center;
     
+}
+.submit {
+      padding-top: 2px;
+      padding-bottom: 2px;
+      padding-left: 35px;
+      padding-right: 35px;
+      margin: 5px;
+      border-radius: 10px;
 }
 
 .submit:hover{
@@ -73,4 +99,8 @@ background-color: lightskyblue;
     background-color: gray;
     width: 100vw;
    height: 100px;
+   border-radius: 10px;
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
 }
