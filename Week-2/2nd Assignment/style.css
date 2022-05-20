@@ -2,6 +2,17 @@
 margin: 0;
 padding: 0;
 }
+.container{
+    width: 100%;
+        height: 100%;
+        position: relative;
+}
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
 
 .element{
     width: 100vw;
@@ -9,6 +20,7 @@ padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
 }
 
 .element_left, .element_right{
@@ -25,32 +37,40 @@ padding: 0;
 .element_1{
     background-color: red;
     animation-name: left1;
-    animation-duration: 10s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
 }
 
 
 .element_2{
     background-color: blue;
     animation-name: left2;
-    animation-duration: 10s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
   
 }
 
 .element_3{
     background-color: yellow;
     animation-name: right1;
-    animation-duration: 10s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
    
 }
 
 .element_4{
     background-color: green;
     animation-name: right2;
-    animation-duration: 10s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
 }
 
 @keyframes left1{
