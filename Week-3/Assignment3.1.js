@@ -1,4 +1,4 @@
-// memoize funtion that stores results of a funtion
+// memoize function that stores results of a funtion
 function memoize(fn){
     const cache = new Map();
     return function(...args){
@@ -13,7 +13,7 @@ function memoize(fn){
     };
 }
 
-// funtion for number addtion that takes n number of argumnets
+// function for number addtion that takes n number of argumnets
 function addNumbers()
 {
     var sum=0;
@@ -24,6 +24,7 @@ function addNumbers()
     return sum;
 }
 
+
 function time(fn){
     console.time();
     fn();
@@ -31,8 +32,7 @@ function time(fn){
 }
 
 const addM = memoize(addNumbers);
-
-time(()=> addM(4,5,9,8));
-time(()=> addM(4,5));
-time(()=> addM(4,5,9,8));
-time(()=> addM(4,5));
+time(addM.bind(4,5));
+time(addM.bind(4,5));
+time(addM.bind(4,5));
+time(addM.bind(4,5));
