@@ -1,12 +1,10 @@
-class Queue{
-	
-constructor()
-{
+function Queue() {
+
 	this.s1 = [];
 	this.s2 = [];
-}
 
-enQueue(x)
+
+this.enQueue = (x) =>
 {
 	
 	// Move all elements from s1 to s2
@@ -28,13 +26,13 @@ enQueue(x)
 }
 
 
-deQueue()
+this.deQueue= () =>
 {
 	
 
 	if (this.s1.length == 0)
 	{
-		document.write("Q is Empty");
+	console.log("Q is Empty");
 	}
 
 
