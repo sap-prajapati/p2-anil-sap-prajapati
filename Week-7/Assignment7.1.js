@@ -9,9 +9,9 @@ var head;
   
     /* Function to reverse the linked list */
     function reverse(node) {
-    var prev = null;
-    var current = node;
-    var next = null;
+    let prev = null;
+    let current = node;
+    let next = null;
         while (current != null) {
             next = current.next;
             current.next = prev;
@@ -24,7 +24,7 @@ var head;
   
  
     function print() {
-        var temp = head;
+        let temp = head;
             while (temp != null) {
                 console.log(temp.data + " ");
                 temp = temp.next;
@@ -33,7 +33,7 @@ var head;
         }
       
         function push(data) {
-        var temp = new Node(data);
+        let temp = new Node(data);
             temp.next = head;
             head = temp;
         }
