@@ -41,6 +41,9 @@ function areBracketsBalanced(expr)
 			if (check == '(' || check == '{')
 				return false;
 			break;
+		default:
+				console.log(`wrong expression`);
+		
 		}
 	}
 
@@ -49,7 +52,7 @@ function areBracketsBalanced(expr)
 }
 
 
-let expr = "([{}]])";
+let expr = "([[{}]])";
 
 // Function call
 if (areBracketsBalanced(expr))
