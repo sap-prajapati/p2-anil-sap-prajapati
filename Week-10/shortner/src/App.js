@@ -1,20 +1,31 @@
-import React, { useRef, useState } from 'react';
+import React, {useState, useRef} from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import axios from 'axios';
 import './App.css';
+const customURL = new Map();
+
 
 function App() {
   const input_box = useRef();
   const [urlList, setUrlList] = useState([]);
   const [shortURL, setShortURL] = useState([]);
-
+  
 
   const createURL = async () => {
     try {
       const url = new URL(input_box.current.value).toString();
-      const res = await axios(`https://api.shrtco.de/v2/shorten?url=${url}`);
-      setShortURL([...shortURL, res.data.result.full_short_link])
-      urlList.push(url);
+      if(customURL.has(url)){
+        setShortURL([...shortURL, customURL.get(url)]);
+        
+      }
+      else{
+        const res = await axios(`https://api.shrtco.de/v2/shorten?url=${url}`);
+        customURL.set(url,res.data.result.full_short_link);
+        setShortURL([...shortURL, res.data.result.full_short_link])
+      }
+      console.log(customURL);
+      setUrlList([...urlList, url]);
+
     } catch (err) {
       alert(err.message);
       input_box.current.value = '';
